@@ -120,7 +120,9 @@ const I18N = (() => {
       'contact.phSubject': 'Asunto',
       'contact.phMessage': 'Mensaje',
       'contact.send': 'Enviar Mensaje',
+      'contact.sending': 'Enviando...',
       'contact.sent': '¡Enviado!',
+      'contact.error': 'Error al enviar',
       'contact.infoTitle': 'Información de Contacto',
       'contact.intro': 'Si deseas conversar sobre desarrollo de software, arquitectura de datos, consultoría técnica o cualquier oportunidad de colaboración, no dudes en contactarme.',
 
@@ -275,7 +277,9 @@ const I18N = (() => {
       'contact.phSubject': 'Subject',
       'contact.phMessage': 'Message',
       'contact.send': 'Send Message',
+      'contact.sending': 'Sending...',
       'contact.sent': 'Sent!',
+      'contact.error': 'Failed to send',
       'contact.infoTitle': 'Contact Information',
       'contact.intro': 'Whether you want to discuss software development, data architecture, technical consulting, or any collaboration opportunity, feel free to reach out.',
 

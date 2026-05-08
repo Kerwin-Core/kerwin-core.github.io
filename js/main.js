@@ -187,21 +187,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* ---------- Contact Form ---------- */
+  /* ---------- Contact Form (Formspree) ---------- */
   const form = document.getElementById('contactForm');
   if (form) {
     form.addEventListener('submit', e => {
       e.preventDefault();
       const btn = form.querySelector('.btn-send');
       const orig = btn.innerHTML;
+      const sendingText = (typeof I18N !== 'undefined') ? I18N.get('contact.sending') : 'Enviando...';
       const sentText = (typeof I18N !== 'undefined') ? I18N.get('contact.sent') : '¡Enviado!';
-      btn.innerHTML = '<i class="fas fa-check"></i> ' + sentText;
-      btn.style.background = '#28a745';
-      setTimeout(() => {
-        btn.innerHTML = orig;
-        btn.style.background = '';
-        form.reset();
-      }, 3000);
+      const errorText = (typeof I18N !== 'undefined') ? I18N.get('contact.error') : 'Error al enviar';
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ' + sendingText;
+      btn.disabled = true;
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(res => {
+        if (res.ok) {
+          btn.innerHTML = '<i class="fas fa-check"></i> ' + sentText;
+          btn.style.background = '#28a745';
+          form.reset();
+        } else {
+          throw new Error('Server error');
+        }
+      }).catch(() => {
+        btn.innerHTML = '<i class="fas fa-times"></i> ' + errorText;
+        btn.style.background = '#dc3545';
+      }).finally(() => {
+        setTimeout(() => {
+          btn.innerHTML = orig;
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      });
     });
   }
 
