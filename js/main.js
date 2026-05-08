@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
   animateCounters();
 
   /* ---------- Scroll Reveal ---------- */
-  const revealEls = document.querySelectorAll('.about-box, .counter-box, .contact-box, .title-box.text-center, .timeline-item, .edu-card, .competencies-box, .blog-card, .cert-item, .lang-item');
+  const revealEls = document.querySelectorAll('.about-box, .counter-box, .contact-box, .title-box.text-center, .timeline-item, .edu-card, .competencies-box, .blog-card, .cert-item, .lang-item, .project-card');
   revealEls.forEach(el => el.classList.add('reveal-el'));
 
   function scrollReveal() {

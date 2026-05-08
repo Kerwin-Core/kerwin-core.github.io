@@ -11,6 +11,7 @@ const I18N = (() => {
       'nav.home': 'Inicio',
       'nav.about': 'Perfil',
       'nav.experience': 'Experiencia',
+      'nav.projects': 'Proyectos',
       'nav.education': 'Formación',
       'nav.resume': 'Resumen',
       'nav.contact': 'Contacto',
@@ -126,6 +127,22 @@ const I18N = (() => {
       'contact.infoTitle': 'Información de Contacto',
       'contact.intro': 'Si deseas conversar sobre desarrollo de software, arquitectura de datos, consultoría técnica o cualquier oportunidad de colaboración, no dudes en contactarme.',
 
+      /* --- Key Projects --- */
+      'proj.heading': 'Proyectos Clave',
+      'proj.subtitle': 'Proyectos de alto impacto que demuestran experiencia en arquitectura, liderazgo técnico y entrega de soluciones en healthtech.',
+      'proj.1title': 'gPM — Módulo de Gestión de Consultorios',
+      'proj.1metric': '+8 años como desarrollador principal',
+      'proj.1desc': 'Desarrollador y mantenedor principal de gPM (Practice Management), uno de los módulos core de la plataforma EMR gGastro, que gestiona agendamiento, facturación y flujos de trabajo clínicos para miles de consultorios especializados en EE.UU.',
+      'proj.2title': 'Modernización a Microservicios',
+      'proj.2metric': 'Entregado en 6 meses',
+      'proj.2desc': 'Lideré la migración completa de servicios monolíticos legados hacia una arquitectura moderna de microservicios con FHIR, GraphQL y REST APIs, mejorando significativamente la escalabilidad y mantenibilidad del sistema.',
+      'proj.3title': 'Módulo de Estados de Cuenta',
+      'proj.3metric': 'Ciclo completo de vida',
+      'proj.3desc': 'Desarrollé y desplegué el módulo de Statements desde cero, gestionando el rollout completo hacia todos los consultorios clientes, incluyendo diseño, pruebas y despliegue en producción en toda la base de clientes.',
+      'proj.4title': 'Integración de Plataformas Clínicas',
+      'proj.4metric': '+20 endpoints FHIR gestionados',
+      'proj.4desc': 'Lideré la integración end-to-end de Klara Balance (comunicación con pacientes) y mmPay (procesamiento de pagos) a través de arquitectura de microservicios con FHIR, REST APIs y GraphQL, habilitando el intercambio de datos en todo el ecosistema clínico.',
+
       /* --- Blog --- */
       'nav.blog': 'Blog',
       'blog.heading': 'Blog',
@@ -168,6 +185,7 @@ const I18N = (() => {
       'nav.home': 'Home',
       'nav.about': 'Profile',
       'nav.experience': 'Experience',
+      'nav.projects': 'Projects',
       'nav.education': 'Education',
       'nav.resume': 'Resume',
       'nav.contact': 'Contact',
@@ -282,6 +300,22 @@ const I18N = (() => {
       'contact.error': 'Failed to send',
       'contact.infoTitle': 'Contact Information',
       'contact.intro': 'Whether you want to discuss software development, data architecture, technical consulting, or any collaboration opportunity, feel free to reach out.',
+
+      /* --- Key Projects --- */
+      'proj.heading': 'Key Projects',
+      'proj.subtitle': 'High-impact projects demonstrating expertise in architecture, technical leadership, and healthtech solution delivery.',
+      'proj.1title': 'gPM — Practice Management Module',
+      'proj.1metric': '8+ years as lead developer',
+      'proj.1desc': 'Primary developer and maintainer of gPM (Practice Management), one of the core modules of the gGastro EMR platform, handling scheduling, billing, and clinical workflow management for thousands of specialist practices across the U.S.',
+      'proj.2title': 'Microservices Modernization',
+      'proj.2metric': 'Delivered in 6 months',
+      'proj.2desc': 'Led the full migration of legacy monolithic services to a modern microservices architecture using FHIR, GraphQL, and REST APIs, significantly improving system scalability and maintainability.',
+      'proj.3title': 'Statements Module',
+      'proj.3metric': 'Full lifecycle',
+      'proj.3desc': 'Developed and deployed the Statements module from scratch, managing the complete rollout to all client practices — including design, testing, and production deployment across the full customer base.',
+      'proj.4title': 'Clinical Platform Integrations',
+      'proj.4metric': '20+ FHIR endpoints managed',
+      'proj.4desc': 'Led end-to-end integration of Klara Balance (patient communication) and mmPay (payment processing) through a microservices architecture with FHIR, REST APIs, and GraphQL, enabling seamless data exchange across the full care ecosystem.',
 
       /* --- Blog --- */
       'nav.blog': 'Blog',
