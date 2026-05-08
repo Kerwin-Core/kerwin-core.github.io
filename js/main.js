@@ -5,6 +5,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  /* ---------- Disable Right-Click ---------- */
+  document.addEventListener('contextmenu', e => e.preventDefault());
+
   /* ---------- Header Scroll Effect ---------- */
   const header = document.getElementById('header');
   function handleHeaderScroll() {
