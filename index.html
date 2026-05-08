@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerwin Arias — Senior Software Developer | Healthtech</title>
+  <meta name="description" content="Kerwin Arias — Senior Software Developer con +35 años de experiencia en healthtech, EMR, FHIR, GraphQL, .NET/C# y arquitectura de datos.">
+
+  <!-- Open Graph / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kerwin Arias — Senior Software Developer | Healthtech">
+  <meta property="og:description" content="+35 años de experiencia en healthtech, EMR, FHIR, GraphQL, .NET/C# y arquitectura de datos.">
+  <meta property="og:image" content="assets/images/profile.jpg">
+  <meta property="og:locale" content="es_CL">
+
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net https://cdnjs.cloudflare.com data:; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>KA</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="header" class="fixed-top">
+    <div class="header-container">
+      <h1 class="logo"><a href="#">Kerwin Arias</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="nav-lang-item">
+            <div class="lang-switch" id="langSwitch" role="radiogroup" aria-label="Language">
+              <button class="lang-opt active" data-lang="es" id="langOptEs" aria-pressed="true">ES</button>
+              <button class="lang-opt" data-lang="en" id="langOptEn" aria-pressed="false">EN</button>
+            </div>
+          </li>
+          <li class="nav-separator"></li>
+          <li><a class="nav-link scrollto active" href="#hero" data-i18n="nav.home">Inicio</a></li>
+          <li><a class="nav-link scrollto" href="#about" data-i18n="nav.about">Perfil</a></li>
+          <li><a class="nav-link scrollto" href="#experience" data-i18n="nav.experience">Experiencia</a></li>
+          <li><a class="nav-link scrollto" href="#education" data-i18n="nav.education">Formación</a></li>
+          <li><a class="nav-link" href="resume.html" data-i18n="nav.resume">Resumen</a></li>
+          <li><a class="nav-link scrollto" href="#blog" data-i18n="nav.blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="#contact" data-i18n="nav.contact">Contacto</a></li>
+        </ul>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======== HERO ======== -->
+  <section id="hero" class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-inner">
+        <p class="hero-greeting" data-i18n="hero.greeting">Hola, soy</p>
+        <h1 class="hero-title">Kerwin Arias</h1>
+        <p class="hero-subtitle"><span class="typed" id="typed-text"></span><span class="typed-cursor">|</span></p>
+        <div class="hero-cta-wrap">
+          <a href="#contact" class="btn-hero" data-i18n="hero.cta">Contáctame</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ======== ABOUT ======== -->
+    <section id="about" class="about-section">
+      <div class="container">
+        <div class="about-box">
+          <div class="about-row">
+            <div class="about-left">
+              <div class="about-top-row">
+                <div class="about-img"><img src="assets/images/profile.jpg" alt="Kerwin Arias" class="profile-photo"></div>
+                <div class="about-info">
+                  <p><span class="info-label" data-i18n="about.name">Nombre:</span> <span>Kerwin Alexander Arias</span></p>
+                  <p><span class="info-label" data-i18n="about.title">Título:</span> <span data-i18n="about.titleVal">Ing. en Sistemas</span></p>
+                  <p><span class="info-label" data-i18n="about.location">Ubicación:</span> <span>Santiago, Chile</span></p>
+                  <p><span class="info-label">Email:</span> <span><a href="mailto:kerwin.arias@gmail.com">kerwin.arias@gmail.com</a></span></p>
+                  <p><span class="info-label" data-i18n="about.phone">Teléfono:</span> <span><a href="tel:+56945395886">+56 9 4539 5886</a></span></p>
+                </div>
+              </div>
+              <div class="skill-section">
+                <p class="skill-title" data-i18n="about.skills">Competencias Técnicas</p>
+                <div class="skill-item"><span class="skill-name" data-i18n="skill.db">Diseño de Bases de Datos</span><span class="skill-percent">95%</span><div class="progress"><div class="progress-bar" data-width="95"></div></div></div>
+                <div class="skill-item"><span class="skill-name">C# / .NET</span><span class="skill-percent">95%</span><div class="progress"><div class="progress-bar" data-width="95"></div></div></div>
+                <div class="skill-item"><span class="skill-name">SQL Server / PL-SQL / Oracle</span><span class="skill-percent">95%</span><div class="progress"><div class="progress-bar" data-width="95"></div></div></div>
+                <div class="skill-item"><span class="skill-name">FHIR / HL7 / GraphQL</span><span class="skill-percent">90%</span><div class="progress"><div class="progress-bar" data-width="90"></div></div></div>
+                <div class="skill-item"><span class="skill-name" data-i18n="skill.pm">Gerencia de Proyectos</span><span class="skill-percent">92%</span><div class="progress"><div class="progress-bar" data-width="92"></div></div></div>
+                <div class="skill-item"><span class="skill-name">PowerShell / Docker / DevOps</span><span class="skill-percent">85%</span><div class="progress"><div class="progress-bar" data-width="85"></div></div></div>
+                <div class="skill-item"><span class="skill-name">Java / PHP / JavaScript</span><span class="skill-percent">85%</span><div class="progress"><div class="progress-bar" data-width="85"></div></div></div>
+              </div>
+            </div>
+            <div class="about-right">
+              <div class="title-box"><h5 class="title-left" data-i18n="about.heading">Sobre Mí</h5></div>
+              <p class="lead-text" data-i18n="about.p1">Senior Software Developer con más de <strong>35 años de experiencia profesional</strong>, incluyendo 14+ años en el sector <strong>healthtech</strong> diseñando y manteniendo plataformas de Historial Médico Electrónico (EMR) utilizadas por miles de profesionales clínicos en Estados Unidos.</p>
+              <p class="lead-text" data-i18n="about.p2">Actualmente arquitectando <strong>microservicios basados en FHIR con GraphQL</strong>, liderando integraciones con sistemas de terceros y automatizando pipelines de datos clínicos con PowerShell y SQL Server en <strong>Modernizing Medicine</strong>. Experiencia profunda en .NET/C#, arquitectura de bases de datos clínicas e integración HL7/FHIR.</p>
+              <p class="lead-text" data-i18n="about.p3">A lo largo de mi carrera he liderado equipos de desarrollo, gestionado proyectos de gran envergadura para clientes como <strong>PDVSA, CITGO, Banco Central de Venezuela y Modernizing Medicine</strong>, y he sido responsable del ciclo completo de desarrollo — desde la planificación y diseño hasta la implementación final.</p>
+              <p class="lead-text" data-i18n="about.p4">Actualmente resido en Chile, donde trabajo 100% remoto con EE.UU. Inglés profesional nivel C1, con comunicación diaria en entorno corporativo. Foco permanente en interoperabilidad, cumplimiento HIPAA e impacto medible en flujos de trabajo de salud.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== COUNTER / STATS ======== -->
+    <section class="counter-section parallax-bg">
+      <div class="counter-overlay"></div>
+      <div class="container counter-container">
+        <div class="counter-row">
+          <div class="counter-box">
+            <div class="counter-ico"><span class="ico-circle"><i class="bi bi-calendar-check"></i></span></div>
+            <div class="counter-num"><p class="counter-value" data-target="35">0</p><span class="counter-text" data-i18n="stats.years">AÑOS DE EXPERIENCIA</span></div>
+          </div>
+          <div class="counter-box">
+            <div class="counter-ico"><span class="ico-circle"><i class="bi bi-people-fill"></i></span></div>
+            <div class="counter-num"><p class="counter-value" data-target="1000">0</p><span class="counter-text" data-i18n="stats.users">USUARIOS IMPACTADOS</span></div>
+          </div>
+          <div class="counter-box">
+            <div class="counter-ico"><span class="ico-circle"><i class="bi bi-building"></i></span></div>
+            <div class="counter-num"><p class="counter-value" data-target="8">0</p><span class="counter-text" data-i18n="stats.companies">EMPRESAS</span></div>
+          </div>
+          <div class="counter-box">
+            <div class="counter-ico"><span class="ico-circle"><i class="bi bi-mortarboard"></i></span></div>
+            <div class="counter-num"><p class="counter-value" data-target="4">0</p><span class="counter-text" data-i18n="stats.degrees">TÍTULOS ACADÉMICOS</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======== EXPERIENCE ======== -->
+    <section id="experience" class="experience-section">
+      <div class="container">
+        <div class="title-box text-center">
+          <h3 class="section-title" data-i18n="exp.heading">Experiencia Profesional</h3>
+          <p class="section-subtitle" data-i18n="exp.subtitle">Más de tres décadas construyendo soluciones tecnológicas de alto impacto.</p>
+          <div class="line-divider"></div>
+        </div>
+
+        <div class="timeline">
+
+          <!-- 1 -->
+          <div class="timeline-item timeline-right">
+            <div class="timeline-badge"><i class="bi bi-laptop"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <span class="timeline-date" data-i18n="exp.date1">Diciembre 2017 — Presente</span>
+                <h4 class="timeline-title" data-i18n="exp.title1">Senior Software Engineer</h4>
+                <span class="timeline-company"><i class="bi bi-building"></i> Modernizing Medicine</span>
+              </div>
+              <div class="timeline-body">
+                <p data-i18n="exp.desc1">Arquitectura y desarrollo de microservicios basados en <strong>FHIR con GraphQL</strong> para la plataforma EMR <strong>gGastro</strong>, utilizada por más de 14.000 especialistas en EE.UU. Integración de plataformas clínicas de terceros (Klara, mmPay) con REST APIs y FHIR. Automatización de pipelines de datos con <strong>PowerShell y SQL Server</strong>. Cumplimiento HIPAA en todas las etapas.</p>
+                <div class="timeline-tags">
+                  <span>C#</span><span>.NET</span><span>SQL Server</span><span>FHIR</span><span>GraphQL</span><span>PowerShell</span><span>Docker</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="timeline-item timeline-left">
+            <div class="timeline-badge"><i class="bi bi-gear"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <span class="timeline-date" data-i18n="exp.date2">Junio 2010 — Diciembre 2017</span>
+                <h4 class="timeline-title" data-i18n="exp.title2">Software Engineer</h4>
+                <span class="timeline-company"><i class="bi bi-building"></i> Gmed</span>
+              </div>
+              <div class="timeline-body">
+                <p data-i18n="exp.desc2">Desarrollo de funcionalidades del sistema EMR <strong>gCare</strong> orientado a la gestión de historias clínicas electrónicas, usando <strong>C#, .NET y PL-SQL</strong> sobre SQL Server. Optimización de consultas SQL en bases de datos clínicas de alto volumen, mejorando el rendimiento de reportes en un <strong>40%</strong>.</p>
+                <div class="timeline-tags">
+                  <span>C#</span><span>.NET</span><span>PL-SQL</span><span>SQL Server</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="timeline-item timeline-right">
+            <div class="timeline-badge"><i class="bi bi-people"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <span class="timeline-date" data-i18n="exp.date3">Abril 2006 — Junio 2010</span>
+                <h4 class="timeline-title" data-i18n="exp.title3">Project Manager / Tech Lead</h4>
+                <span class="timeline-company"><i class="bi bi-building"></i> C.T.P. – Gmed</span>
+              </div>
+              <div class="timeline-body">
+                <p data-i18n="exp.desc3">Liderazgo de un equipo de <strong>6 desarrolladores</strong> en el ciclo completo de desarrollo. Diseño de modelos de bases de datos relacionales para aplicaciones clínicas e interfaces de usuario en .NET/C#. Reducción del tiempo de entrega de funcionalidades en un <strong>25%</strong> mediante estandarización de procesos y adopción de metodologías ágiles.</p>
+                <div class="timeline-tags">
+                  <span data-i18n="tag.management">Gestión</span><span>VB.NET</span><span>C#</span><span>SQL Server</span><span data-i18n="tag.leadership">Liderazgo</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="timeline-item timeline-left">
+            <div class="timeline-badge"><i class="bi bi-diagram-3"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <span class="timeline-date" data-i18n="exp.date4">Agosto 2000 — Abril 2006</span>
+                <h4 class="timeline-title" data-i18n="exp.title4">Development Manager</h4>
+                <span class="timeline-company"><i class="bi bi-building"></i> Visión Grupo Consultores C.A.</span>
+              </div>
+              <div class="timeline-body">
+                <p data-i18n="exp.desc4a">Gestión del desarrollo de las plataformas <strong>Strategos, Satec y Vernier</strong>, sistemas empresariales de planificación estratégica y control de gestión. Consultor señor para el <strong>Banco Central de Venezuela</strong> y Fondafa.</p>
+                <p class="mt-sm" data-i18n="exp.desc4b">Arquitectura de soluciones web con <strong>Java (JSP, J2EE, Hibernate, Struts)</strong> con backends en SQL Server, Oracle y PostgreSQL. Productos: <strong>Strategos®</strong> (Balanced Scorecard — +1000 licencias), <strong>RADAR®</strong>.</p>
+                <p class="mt-sm"><em data-i18n="exp.desc4c">Clientes: PDVSA, CITGO, Electricidad de Caracas, ENELBAR, Royal &amp; Sunalliance, Movilnet, Ministerio de Defensa, entre otros.</em></p>
+                <div class="timeline-tags">
+                  <span>Visual Basic</span><span>ASP</span><span>Java</span><span>Oracle</span><span>DB2</span><span>Sybase</span><span>Informix</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="timeline-item timeline-right">
+            <div class="timeline-badge"><i class="bi bi-lightning"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <span class="timeline-date" data-i18n="exp.date5">Diciembre 1996 — Agosto 2000</span>
+                <h4 class="timeline-title" data-i18n="exp.title5">Analista de Sistemas</h4>
+                <span class="timeline-company"><i class="bi bi-building"></i> Electricidad de Caracas C.A.</span>
+              </div>
+              <div class="timeline-body">
+                <p data-i18n="exp.desc5">Desarrollo de sistemas de soporte de decisiones empleando técnicas <strong>Delphi, Bayesiano y AHP</strong>. Desarrollo del sistema DataWarehouse con herramientas de Oracle (Express Objects, Administrador, Analyser) y PL-SQL.</p>
+                <div class="timeline-tags">
+                  <span>Visual Basic</span><span>Oracle</span><span>PL-SQL</span><span>DataWarehouse</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="timeline-item timeline-left">
+            <div class="timeline-badge"><i class="bi bi-fuel-pump"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <span class="timeline-date" data-i18n="exp.date6">Febrero 1994 — Noviembre 1996</span>
+                <h4 class="timeline-title" data-i18n="exp.title6">Analista Programador</h4>
+                <span class="timeline-company"><i class="bi bi-building"></i> PDVSA BITOR</span>
+              </div>
+              <div class="timeline-body">
+                <p data-i18n="exp.desc6">Supervisión de personal de desarrollo. Desarrollo de sistemas administrativos y financieros con <strong>Visual Basic, Access y Oracle PL-SQL</strong>.</p>
+                <div class="timeline-tags">
+                  <span>Visual Basic</span><span>Access</span><span>Oracle</span><span>PL-SQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7 -->
+          <div class="timeline-item timeline-right">
+            <div class="timeline-badge"><i class="bi bi-bank"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <span class="timeline-date" data-i18n="exp.date7">Abril 1992 — Enero 1994</span>
+                <h4 class="timeline-title" data-i18n="exp.title7">Analista Programador</h4>
+                <span class="timeline-company"><i class="bi bi-building"></i> Archicentro Sistemas C.A.</span>
+              </div>
+              <div class="timeline-body">
+                <p data-i18n="exp.desc7">Desarrollo de sistemas para organismos bancarios. Líder de proyecto para la automatización de registro del <strong>Banco Provincial</strong>.</p>
+                <div class="timeline-tags">
+                  <span>Visual Basic</span><span>Access</span><span>Oracle</span><span>PL-SQL</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8 -->
+          <div class="timeline-item timeline-left">
+            <div class="timeline-badge"><i class="bi bi-truck"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <span class="timeline-date" data-i18n="exp.date8">Abril 1990 — Febrero 1992</span>
+                <h4 class="timeline-title" data-i18n="exp.title8">Analista Programador</h4>
+                <span class="timeline-company"><i class="bi bi-building"></i> King Ocean Service de Venezuela C.A.</span>
+              </div>
+              <div class="timeline-body">
+                <p data-i18n="exp.desc8">Desarrollo de sistemas administrativos y financieros utilizando <strong>Unís, dBase, Clipper, Basic y FoxPro</strong>.</p>
+                <div class="timeline-tags">
+                  <span>dBase</span><span>Clipper</span><span>FoxPro</span><span>Basic</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /timeline -->
+      </div>
+    </section>
+
+    <!-- ======== EDUCATION ======== -->
+    <section id="education" class="education-section">
+      <div class="container">
+        <div class="title-box text-center">
+          <h3 class="section-title" data-i18n="edu.heading">Formación Académica</h3>
+          <p class="section-subtitle" data-i18n="edu.subtitle">Preparación continua como base del crecimiento profesional.</p>
+          <div class="line-divider"></div>
+        </div>
+
+        <div class="education-grid">
+
+          <div class="edu-card">
+            <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <div class="edu-content">
+              <h4 class="edu-degree" data-i18n="edu.deg1">Ingeniero en Sistemas</h4>
+              <p class="edu-school">Universidad Alejandro Humboldt</p>
+              <span class="edu-year" data-i18n="edu.year1">Egresado 2010</span>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <div class="edu-content">
+              <h4 class="edu-degree" data-i18n="edu.deg2">Licenciado en Administración (Mención Informática)</h4>
+              <p class="edu-school">Universidad Simón Rodríguez</p>
+              <span class="edu-year" data-i18n="edu.year2">Egresado 2001</span>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-icon"><i class="bi bi-award-fill"></i></div>
+            <div class="edu-content">
+              <h4 class="edu-degree" data-i18n="edu.deg3">Postgrado: Gerencia en Tecnología</h4>
+              <p class="edu-school">Universidad Santa María</p>
+              <span class="edu-year" data-i18n="edu.year3">Egresado 1998</span>
+            </div>
+          </div>
+
+          <div class="edu-card">
+            <div class="edu-icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <div class="edu-content">
+              <h4 class="edu-degree" data-i18n="edu.deg4">Técnico Superior en Informática</h4>
+              <p class="edu-school">Instituto Universitario de Venezuela</p>
+              <span class="edu-year" data-i18n="edu.year4">Egresado 1993</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Additional Skills / Competencies -->
+        <div class="competencies-box">
+          <div class="title-box text-center">
+            <h5 class="title-left" style="text-align:center;" data-i18n="edu.techTitle">Tecnologías &amp; Herramientas</h5>
+          </div>
+          <div class="tech-tags">
+            <span class="tech-tag">C#</span>
+            <span class="tech-tag">.NET / .NET Core</span>
+            <span class="tech-tag">GraphQL</span>
+            <span class="tech-tag">REST APIs</span>
+            <span class="tech-tag">FHIR</span>
+            <span class="tech-tag">HL7</span>
+            <span class="tech-tag">SQL Server</span>
+            <span class="tech-tag">Oracle</span>
+            <span class="tech-tag">PL-SQL</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">DB2</span>
+            <span class="tech-tag">Informix</span>
+            <span class="tech-tag">PowerShell</span>
+            <span class="tech-tag">Docker Compose</span>
+            <span class="tech-tag">Kubernetes</span>
+            <span class="tech-tag">Git / GitHub</span>
+            <span class="tech-tag">Jira</span>
+            <span class="tech-tag">NUnit</span>
+            <span class="tech-tag">Postman / Bruno</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">PHP</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">HTML5 / CSS3</span>
+            <span class="tech-tag">IIS</span>
+            <span class="tech-tag">Visual Studio</span>
+            <span class="tech-tag">Scrum / Kanban</span>
+            <span class="tech-tag">HIPAA</span>
+          </div>
+        </div>
+
+        <!-- Certifications -->
+        <div class="competencies-box">
+          <div class="title-box text-center">
+            <h5 class="title-left" style="text-align:center;" data-i18n="cert.heading">Certificaciones &amp; Formación Continua</h5>
+          </div>
+          <div class="cert-grid">
+            <div class="cert-item"><i class="bi bi-patch-check-fill"></i><div><strong data-i18n="cert.1">Everyday AI: Concepts &amp; Applications</strong><span class="cert-date" data-i18n="cert.1date">LinkedIn Learning — Mar 2026</span></div></div>
+            <div class="cert-item"><i class="bi bi-patch-check-fill"></i><div><strong data-i18n="cert.2">MongoDB Essential Training</strong><span class="cert-date" data-i18n="cert.2date">LinkedIn Learning — Abr 2024</span></div></div>
+            <div class="cert-item"><i class="bi bi-patch-check-fill"></i><div><strong data-i18n="cert.3">Microservices: Design Patterns</strong><span class="cert-date" data-i18n="cert.3date">LinkedIn Learning — May 2022</span></div></div>
+            <div class="cert-item"><i class="bi bi-patch-check-fill"></i><div><strong data-i18n="cert.4">Microservices Foundations</strong><span class="cert-date" data-i18n="cert.4date">LinkedIn Learning — May 2022</span></div></div>
+            <div class="cert-item"><i class="bi bi-patch-check-fill"></i><div><strong data-i18n="cert.5">SQL Server 2012: Designing Database Solutions</strong><span class="cert-date" data-i18n="cert.5date">LinkedIn Learning — Feb 2021</span></div></div>
+            <div class="cert-item"><i class="bi bi-patch-check-fill"></i><div><strong data-i18n="cert.6">C# Best Practices for Developers</strong><span class="cert-date" data-i18n="cert.6date">LinkedIn Learning — Ago 2020</span></div></div>
+            <div class="cert-item"><i class="bi bi-patch-check-fill"></i><div><strong data-i18n="cert.7">AWS Technical Essentials</strong><span class="cert-date" data-i18n="cert.7date">Amazon Web Services (AWS)</span></div></div>
+            <div class="cert-item"><i class="bi bi-patch-check-fill"></i><div><strong data-i18n="cert.8">Oracle PL-SQL Database Programming 7</strong><span class="cert-date" data-i18n="cert.8date">Oracle Venezuela — 1993</span></div></div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="competencies-box">
+          <div class="title-box text-center">
+            <h5 class="title-left" style="text-align:center;" data-i18n="lang.heading">Idiomas</h5>
+          </div>
+          <div class="lang-grid">
+            <div class="lang-item">
+              <span class="lang-flag">🇪🇸</span>
+              <div><strong data-i18n="lang.es">Español</strong><span class="lang-level" data-i18n="lang.esLevel">Nativo</span></div>
+            </div>
+            <div class="lang-item">
+              <span class="lang-flag">🇺🇸</span>
+              <div><strong data-i18n="lang.en">Inglés</strong><span class="lang-level" data-i18n="lang.enLevel">Nivel profesional C1 — uso diario en entorno corporativo remoto con EE.UU.</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======== BLOG ======== -->
+    <section id="blog" class="blog-section">
+      <div class="container">
+        <div class="title-box text-center">
+          <h3 class="section-title" data-i18n="blog.heading">Blog</h3>
+          <p class="section-subtitle" data-i18n="blog.subtitle">Reflexiones, lecciones y experiencias de más de tres décadas en healthtech y desarrollo de software.</p>
+          <div class="line-divider"></div>
+        </div>
+
+        <div class="blog-grid">
+
+          <a href="blog/lecciones-33-anos-desarrollo.html" class="blog-card">
+            <div class="blog-card-img">
+              <img src="assets/images/blog/blog-lecciones.svg" alt="Lecciones de 35 años" loading="lazy">
+              <span class="blog-tag" data-i18n="blog.tag.career">Carrera</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-date"><i class="bi bi-calendar3"></i> <span data-i18n="blog.date1">5 Mayo, 2026</span></span>
+              <h4 class="blog-card-title" data-i18n="blog.title1">10 Lecciones que Aprendí en 35 Años de Desarrollo de Software</h4>
+              <p class="blog-card-excerpt" data-i18n="blog.excerpt1">De dBase a microservicios FHIR, de waterfalls a agile — las verdades que solo el tiempo te enseña en esta industria.</p>
+              <span class="blog-read-more" data-i18n="blog.readMore">Leer más <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a href="blog/oracle-vs-sqlserver-vs-postgresql.html" class="blog-card">
+            <div class="blog-card-img">
+              <img src="assets/images/blog/blog-databases.svg" alt="Comparativa de bases de datos" loading="lazy">
+              <span class="blog-tag" data-i18n="blog.tag.tech">Técnico</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-date"><i class="bi bi-calendar3"></i> <span data-i18n="blog.date2">28 Abril, 2026</span></span>
+              <h4 class="blog-card-title" data-i18n="blog.title2">Oracle vs SQL Server vs PostgreSQL: Mi Experiencia Real con los Tres</h4>
+              <p class="blog-card-excerpt" data-i18n="blog.excerpt2">Después de trabajar profesionalmente con estos tres motores, comparto en qué destaca cada uno y cuándo elegir cada opción.</p>
+              <span class="blog-read-more" data-i18n="blog.readMore">Leer más <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </a>
+
+          <a href="blog/gerencia-proyectos-desarrollo.html" class="blog-card">
+            <div class="blog-card-img">
+              <img src="assets/images/blog/blog-gerencia.svg" alt="Gerencia de proyectos" loading="lazy">
+              <span class="blog-tag" data-i18n="blog.tag.leadership">Liderazgo</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-date"><i class="bi bi-calendar3"></i> <span data-i18n="blog.date3">20 Abril, 2026</span></span>
+              <h4 class="blog-card-title" data-i18n="blog.title3">De Programador a Gerente: Cómo Liderar sin Perder lo Técnico</h4>
+              <p class="blog-card-excerpt" data-i18n="blog.excerpt3">La transición de escribir código a dirigir equipos es un camino lleno de errores. Aquí comparto cómo lo navegué.</p>
+              <span class="blog-read-more" data-i18n="blog.readMore">Leer más <i class="bi bi-arrow-right"></i></span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======== CONTACT ======== -->
+    <section id="contact" class="contact-section parallax-bg-2">
+      <div class="contact-overlay"></div>
+      <div class="container contact-container">
+        <div class="contact-box">
+          <div class="contact-row">
+            <div class="contact-left">
+              <div class="title-box"><h5 class="title-left" data-i18n="contact.formTitle">Envíame un Mensaje</h5></div>
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-group"><input type="text" name="name" class="form-control" data-i18n-placeholder="contact.phName" placeholder="Tu Nombre" required></div>
+                <div class="form-group"><input type="email" name="email" class="form-control" data-i18n-placeholder="contact.phEmail" placeholder="Tu Email" required></div>
+                <div class="form-group"><input type="text" name="subject" class="form-control" data-i18n-placeholder="contact.phSubject" placeholder="Asunto" required></div>
+                <div class="form-group"><textarea name="message" class="form-control" rows="5" data-i18n-placeholder="contact.phMessage" placeholder="Mensaje" required></textarea></div>
+                <div class="form-submit"><button type="submit" class="btn-send" data-i18n="contact.send">Enviar Mensaje</button></div>
+              </form>
+            </div>
+            <div class="contact-right">
+              <div class="title-box"><h5 class="title-left" data-i18n="contact.infoTitle">Información de Contacto</h5></div>
+              <p class="lead-text" data-i18n="contact.intro">Si deseas conversar sobre desarrollo de software, arquitectura de datos, consultoría técnica o cualquier oportunidad de colaboración, no dudes en contactarme.</p>
+              <ul class="contact-list">
+                <li><i class="bi bi-envelope"></i><a href="mailto:kerwin.arias@gmail.com">kerwin.arias@gmail.com</a></li>
+                <li><i class="bi bi-telephone"></i><a href="tel:+56945395886">+56 9 4539 5886</a></li>
+                <li><i class="bi bi-geo-alt"></i><span>Santiago, Chile</span></li>
+              </ul>
+              <div class="social-links">
+                <ul>
+                  <li><a href="https://www.linkedin.com/in/kerwin-alexander-arias-36b8a3170" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
+                  <li><a href="https://github.com/Kerwin-Core" target="_blank" rel="noopener noreferrer"><span class="ico-circle"><i class="bi bi-github"></i></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">&copy; <span id="currentYear">2026</span> <strong>Kerwin Arias</strong>. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

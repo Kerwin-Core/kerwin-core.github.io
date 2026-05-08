@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# IDE
+.vscode/
+*.swp
+*.swo
+
+# Word source files (keep PDFs only)
+*.doc
+*.docx

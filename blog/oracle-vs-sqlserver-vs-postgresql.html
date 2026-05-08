@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oracle vs SQL Server vs PostgreSQL — Kerwin Arias</title>
+  <meta name="description" content="Después de trabajar profesionalmente con estos tres motores, comparto en qué destaca cada uno y cuándo elegir cada opción.">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Oracle vs SQL Server vs PostgreSQL: Mi Experiencia Real con los Tres">
+  <meta property="og:description" content="Después de trabajar profesionalmente con estos tres motores, comparto en qué destaca cada uno y cuándo elegir cada opción.">
+  <meta property="og:locale" content="es_CL">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>KA</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/blog-post.css">
+</head>
+<body>
+
+  <header id="header" class="fixed-top header-scrolled">
+    <div class="header-container">
+      <h1 class="logo"><a href="../index.html">Kerwin Arias</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link" href="../index.html#hero">Inicio</a></li>
+          <li><a class="nav-link" href="../index.html#about">Perfil</a></li>
+          <li><a class="nav-link" href="../index.html#experience">Experiencia</a></li>
+          <li><a class="nav-link" href="../index.html#education">Formación</a></li>
+          <li><a class="nav-link" href="../resume.html">Resumen</a></li>
+          <li><a class="nav-link active" href="../index.html#blog">Blog</a></li>
+          <li><a class="nav-link" href="../index.html#contact">Contacto</a></li>
+        </ul>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="blog-post-main">
+    <article class="blog-post-article">
+
+      <div class="blog-post-hero">
+        <div class="blog-post-hero-overlay"></div>
+        <div class="container blog-post-hero-content">
+          <a href="../index.html#blog" class="blog-back-link"><i class="bi bi-arrow-left"></i> Volver al Blog</a>
+          <span class="blog-post-tag">Técnico</span>
+          <h1 class="blog-post-title">Oracle vs SQL Server vs PostgreSQL: Mi Experiencia Real con los Tres</h1>
+          <div class="blog-post-meta">
+            <span><i class="bi bi-person"></i> Kerwin Arias</span>
+            <span><i class="bi bi-calendar3"></i> 28 Abril, 2026</span>
+            <span><i class="bi bi-clock"></i> 10 min lectura</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="blog-post-content">
+
+          <p class="blog-post-lead">No voy a escribir otro artículo de comparación genérica sacado de la documentación oficial. En cambio, voy a compartir lo que viví trabajando con Oracle desde 1996, SQL Server desde 2000, y PostgreSQL en proyectos más recientes. Lo bueno, lo malo y lo que nadie te cuenta.</p>
+
+          <h2>Contexto: ¿Dónde usé cada uno?</h2>
+          <p>Para que mis opiniones tengan contexto:</p>
+          <ul>
+            <li><strong>Oracle:</strong> Electricidad de Caracas (DataWarehouse con Express Objects), Visión Grupo Consultores (Strategos®, RADAR®), y múltiples clientes corporativos.</li>
+            <li><strong>SQL Server:</strong> Desde 2000 a la fecha, principalmente con gCare en Modernizing Medicine — una plataforma médica de misión crítica.</li>
+            <li><strong>PostgreSQL:</strong> Proyectos personales y migraciones recientes.</li>
+          </ul>
+
+          <h2>Oracle: El Ferrari que necesita un mecánico dedicado</h2>
+          <p>Oracle es, sin duda, el motor más poderoso con el que he trabajado. Su capacidad de manejar cargas masivas, su optimizador de consultas y su madurez en entornos corporativos es impresionante.</p>
+          <p>Pero Oracle también es el motor más costoso — no solo en licencias (que son astronómicas), sino en la curva de aprendizaje del DBA. Configurar un entorno Oracle correctamente requiere conocimiento profundo. PL/SQL es un lenguaje potente pero verboso, y la administración del tablespace puede ser un dolor de cabeza.</p>
+
+          <h3>¿Cuándo elegir Oracle?</h3>
+          <p>Cuando tu empresa tiene presupuesto, necesitas manejar terabytes de datos transaccionales, y tienes (o puedes contratar) un DBA especializado. Para bancos, petroleras y grandes corporaciones, Oracle sigue siendo difícil de superar.</p>
+
+          <h2>SQL Server: El caballo de batalla confiable</h2>
+          <p>Llevo más de 20 años trabajando con SQL Server diariamente en gCare. Lo que más valoro es su consistencia: funciona, es predecible, y las herramientas de administración (SSMS) son excelentes.</p>
+          <p>SQL Server brilla en el ecosistema Microsoft. Si tu stack es .NET + Windows + Azure, la integración es natural. T-SQL es más limpio que PL/SQL en mi opinión, y el SQL Server Profiler me ha salvado de innumerables bugs de rendimiento.</p>
+
+          <h3>Lo que no me gusta</h3>
+          <p>El modelo de licenciamiento se ha vuelto confuso con las ediciones (Express, Standard, Enterprise). Y cuando trabajas fuera del ecosistema Windows, las cosas se complican. SQL Server en Linux ha mejorado, pero no es lo mismo.</p>
+
+          <h3>¿Cuándo elegir SQL Server?</h3>
+          <p>Cuando tu stack es Microsoft, cuando necesitas un motor confiable sin la complejidad de Oracle, y cuando tu equipo ya tiene experiencia en el ecosistema Windows. Para aplicaciones empresariales de tamaño medio a grande, es mi elección por defecto.</p>
+
+          <h2>PostgreSQL: El que no puedes ignorar</h2>
+          <p>PostgreSQL me sorprendió. Siendo open source, tiene una capacidad que rivaliza con motores comerciales. Su manejo de tipos de datos avanzados, JSON nativo, full-text search integrado, y extensiones como PostGIS lo hacen increíblemente versátil.</p>
+
+          <h3>La comunidad es su superpoder</h3>
+          <p>La documentación de PostgreSQL es, en mi experiencia, la mejor de los tres. Y la comunidad responde preguntas con una profundidad que rara vez encontré en foros de Oracle o SQL Server.</p>
+
+          <h3>¿Cuándo elegir PostgreSQL?</h3>
+          <p>Cuando el presupuesto importa (es gratis), cuando necesitas flexibilidad con tipos de datos, cuando trabajas con stack no-Microsoft, o cuando tu proyecto necesita funcionalidades avanzadas sin pagar licencias premium.</p>
+
+          <h2>La comparación que importa</h2>
+
+          <table class="blog-table">
+            <thead>
+              <tr>
+                <th>Aspecto</th>
+                <th>Oracle</th>
+                <th>SQL Server</th>
+                <th>PostgreSQL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Costo</td><td>Alto</td><td>Medio</td><td>Gratis</td></tr>
+              <tr><td>Rendimiento a escala</td><td>Excelente</td><td>Muy bueno</td><td>Muy bueno</td></tr>
+              <tr><td>Curva de aprendizaje</td><td>Empinada</td><td>Moderada</td><td>Moderada</td></tr>
+              <tr><td>Ecosistema</td><td>Enterprise</td><td>Microsoft</td><td>Agnóstico</td></tr>
+              <tr><td>Tooling de admin</td><td>Complejo</td><td>Excelente (SSMS)</td><td>Bueno (pgAdmin)</td></tr>
+              <tr><td>Comunidad</td><td>Corporativa</td><td>Grande</td><td>Excepcional</td></tr>
+            </tbody>
+          </table>
+
+          <div class="blog-post-divider"></div>
+
+          <h2>Conclusión: No hay ganador universal</h2>
+          <p>Después de usar los tres en producción durante años, mi conclusión es que <strong>el mejor motor es el que tu equipo conoce bien</strong>. He visto proyectos fracasar con Oracle mal configurado y triunfar con PostgreSQL bien administrado.</p>
+          <p>Si empezara un proyecto hoy desde cero sin restricciones: elegiría <strong>PostgreSQL</strong> para la mayoría de los casos, <strong>SQL Server</strong> si el stack es .NET, y <strong>Oracle</strong> solo cuando la escala y el presupuesto lo justifiquen.</p>
+
+        </div>
+      </div>
+
+    </article>
+
+    <div class="container">
+      <div class="blog-post-nav">
+        <a href="../index.html#blog" class="btn-hero btn-hero-outline"><i class="bi bi-arrow-left"></i> Volver al Blog</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">&copy; <span id="currentYear">2026</span> <strong>Kerwin Arias</strong>. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mobileToggle = document.querySelector('.mobile-nav-toggle');
+      const navbarUl = document.querySelector('.navbar ul');
+      if (mobileToggle) {
+        mobileToggle.addEventListener('click', () => {
+          navbarUl.classList.toggle('open');
+          const icon = mobileToggle.querySelector('i');
+          icon.classList.toggle('bi-list');
+          icon.classList.toggle('bi-x');
+        });
+      }
+      const btt = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (btt) btt.classList.toggle('visible', window.scrollY > 500);
+      }, { passive: true });
+      if (btt) {
+        btt.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* ============================================
+   RESUME PAGE — PDF Viewer Styles
+   ============================================ */
+
+/* ---------- Resume Main ---------- */
+.resume-main {
+  padding-top: 0;
+}
+
+/* ---------- Resume Hero ---------- */
+.resume-hero {
+  position: relative;
+  padding: 130px 0 50px;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  overflow: hidden;
+}
+
+.resume-hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.resume-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.resume-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+
+.resume-back-link:hover {
+  color: var(--white);
+  gap: 10px;
+}
+
+.resume-page-title {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.resume-page-subtitle {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 28px;
+  max-width: 600px;
+}
+
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* ---------- Resume Viewer ---------- */
+.resume-viewer-box {
+  padding: 40px 0 60px;
+}
+
+.resume-pdf-container {
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--shadow-box);
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+.resume-pdf-object {
+  width: 100%;
+  height: 85vh;
+  min-height: 600px;
+  display: block;
+}
+
+/* Fallback */
+.resume-pdf-fallback {
+  text-align: center;
+  padding: 80px 30px;
+}
+
+.resume-fallback-icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  opacity: 0.6;
+}
+
+.resume-pdf-fallback h3 {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 10px;
+}
+
+.resume-pdf-fallback p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.resume-fallback-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.resume-tip {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 16px;
+}
+
+.resume-tip i {
+  color: var(--primary-color);
+  margin-right: 4px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .resume-hero {
+    padding: 110px 0 35px;
+  }
+
+  .resume-page-title {
+    font-size: 1.7rem;
+  }
+
+  .resume-page-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .resume-actions {
+    flex-direction: column;
+  }
+
+  .resume-actions .btn-hero {
+    text-align: center;
+  }
+
+  .resume-pdf-object {
+    min-height: 400px;
+    height: 60vh;
+  }
+
+  .resume-viewer-box {
+    padding: 30px 0 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-page-title {
+    font-size: 1.4rem;
+  }
+}
