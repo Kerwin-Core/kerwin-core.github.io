@@ -62,6 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Close mobile nav on tap outside
+  document.addEventListener('click', (e) => {
+    if (navbarUl && navbarUl.classList.contains('open')) {
+      if (!navbarUl.contains(e.target) && !mobileToggle.contains(e.target)) {
+        navbarUl.classList.remove('open');
+        const icon = mobileToggle.querySelector('i');
+        icon.classList.add('bi-list');
+        icon.classList.remove('bi-x');
+      }
+    }
+  });
+
   /* ---------- Typed Text Effect ---------- */
   const typedEl = document.getElementById('typed-text');
   let words = (typeof I18N !== 'undefined') ? I18N.get('_typedWords') : ['Ingeniero de Software', 'Gerente de Proyectos', 'Consultor Senior', 'Arquitecto de Datos'];
