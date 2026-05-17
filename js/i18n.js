@@ -355,10 +355,10 @@ const I18N = (() => {
     }
   };
 
-  let currentLang = localStorage.getItem('lang') || 'es';
+  let currentLang = localStorage.getItem('lang') || 'en';
 
   function get(key) {
-    return translations[currentLang][key] || translations.es[key] || key;
+    return translations[currentLang][key] || translations.en[key] || key;
   }
 
   function getLang() {
