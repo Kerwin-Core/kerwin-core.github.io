@@ -160,6 +160,19 @@ const I18N = (() => {
       'blog.date3': '20 Abril, 2026',
       'blog.title3': 'De Programador a Gerente: Cómo Liderar sin Perder lo Técnico',
       'blog.excerpt3': 'La transición de escribir código a dirigir equipos es un camino lleno de errores. Aquí comparto cómo lo navegué.',
+      'blog.viewAll': 'Ver todos los artículos <i class="bi bi-arrow-right"></i>',
+
+      /* --- Blog Archive --- */
+      'blogArchive.title': 'Blog',
+      'blogArchive.subtitle': 'Todos los artículos — reflexiones, lecciones y experiencias de más de tres décadas en healthtech y desarrollo de software.',
+      'blogArchive.all': 'Todos',
+      'blogArchive.filterCareer': 'Carrera',
+      'blogArchive.filterTech': 'Técnico',
+      'blogArchive.filterLeadership': 'Liderazgo',
+      'blogArchive.sortLabel': 'Ordenar:',
+      'blogArchive.sortDesc': 'Más recientes',
+      'blogArchive.sortAsc': 'Más antiguos',
+      'blogArchive.empty': 'No hay artículos en esta categoría.',
 
       /* --- Resume Page --- */
       'resume.back': 'Volver al Inicio',
@@ -334,6 +347,19 @@ const I18N = (() => {
       'blog.date3': 'April 20, 2026',
       'blog.title3': 'From Programmer to Manager: How to Lead Without Losing the Technical Edge',
       'blog.excerpt3': 'The transition from writing code to leading teams is a path full of mistakes. Here\'s how I navigated it.',
+      'blog.viewAll': 'View all posts <i class="bi bi-arrow-right"></i>',
+
+      /* --- Blog Archive --- */
+      'blogArchive.title': 'Blog',
+      'blogArchive.subtitle': 'All posts — insights, lessons, and experiences from over three decades in healthtech and software development.',
+      'blogArchive.all': 'All',
+      'blogArchive.filterCareer': 'Career',
+      'blogArchive.filterTech': 'Technical',
+      'blogArchive.filterLeadership': 'Leadership',
+      'blogArchive.sortLabel': 'Sort:',
+      'blogArchive.sortDesc': 'Newest first',
+      'blogArchive.sortAsc': 'Oldest first',
+      'blogArchive.empty': 'No posts found for this category.',
 
       /* --- Resume Page --- */
       'resume.back': 'Back to Home',

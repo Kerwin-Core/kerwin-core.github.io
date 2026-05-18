@@ -1168,6 +1168,23 @@ img { max-width: 100%; height: auto; }
   gap: 10px;
 }
 
+.blog-view-all {
+  margin-top: 2.5rem;
+}
+
+.blog-view-all .btn-hero {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  box-shadow: none;
+}
+
+.blog-view-all .btn-hero:hover {
+  background: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 4px 20px rgba(var(--primary-rgb), 0.4);
+}
+
 /* ==========================================
    CONTACT SECTION
    ========================================== */

@@ -260,4 +260,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ---------- Dynamic Blog Grid (from posts.json) ---------- */
+  const blogGrid = document.getElementById('blogGrid');
+  if (blogGrid) {
+    async function loadBlogPosts() {
+      try {
+        const res = await fetch('blog/posts.json');
+        const posts = await res.json();
+        const lang = (typeof I18N !== 'undefined') ? I18N.getLang() : 'en';
+        renderBlogCards(posts, lang);
+      } catch (e) {
+        console.warn('Could not load blog posts:', e);
+      }
+    }
+
+    function renderBlogCards(posts, lang) {
+      // Sort descending and take first 3
+      const sorted = [...posts].sort((a, b) => new Date(b.date) - new Date(a.date));
+      const latest = sorted.slice(0, 3);
+
+      blogGrid.innerHTML = latest.map(post => {
+        const t = post[lang] || post.en;
+        return `
+          <a href="${post.url}" class="blog-card reveal-el">
+            <div class="blog-card-img">
+              <img src="${post.image}" alt="${t.title}" loading="lazy">
+              <span class="blog-tag">${t.tag}</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-date"><i class="bi bi-calendar3"></i> ${t.date}</span>
+              <h4 class="blog-card-title">${t.title}</h4>
+              <p class="blog-card-excerpt">${t.excerpt}</p>
+              <span class="blog-read-more">${I18N.get('blog.readMore')}</span>
+            </div>
+          </a>
+        `;
+      }).join('');
+
+      // Trigger reveal for dynamically added cards
+      setTimeout(scrollReveal, 100);
+    }
+
+    loadBlogPosts();
+
+    // Re-render on language change
+    window.addEventListener('langChanged', () => loadBlogPosts());
+  }
+
 });

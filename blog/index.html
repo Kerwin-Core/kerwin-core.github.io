@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — Kerwin Arias</title>
+  <meta name="description" content="All blog posts by Kerwin Arias — insights on healthtech, software architecture, and technical leadership.">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog — Kerwin Arias">
+  <meta property="og:description" content="Insights, lessons, and experiences from over three decades in healthtech and software development.">
+
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>KA</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/blog-archive.css">
+</head>
+<body>
+
+  <header id="header" class="fixed-top header-scrolled">
+    <div class="header-container">
+      <h1 class="logo"><a href="../index.html">Kerwin Arias</a></h1>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li class="nav-lang-item">
+            <div class="lang-switch" id="langSwitch" role="radiogroup" aria-label="Language">
+              <button class="lang-opt active" data-lang="es" id="langOptEs" aria-pressed="true">ES</button>
+              <button class="lang-opt" data-lang="en" id="langOptEn" aria-pressed="false">EN</button>
+            </div>
+          </li>
+          <li class="nav-separator"></li>
+          <li><a class="nav-link" href="../index.html#hero" data-i18n="nav.home">Home</a></li>
+          <li><a class="nav-link" href="../index.html#about" data-i18n="nav.about">Profile</a></li>
+          <li><a class="nav-link" href="../index.html#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a class="nav-link" href="../index.html#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a class="nav-link" href="../index.html#education" data-i18n="nav.education">Education</a></li>
+          <li><a class="nav-link" href="../resume.html" data-i18n="nav.resume">Resume</a></li>
+          <li><a class="nav-link active" href="index.html" data-i18n="nav.blog">Blog</a></li>
+          <li><a class="nav-link" href="../index.html#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+        <button class="mobile-nav-toggle" aria-label="Toggle navigation"><i class="bi bi-list"></i></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="blog-archive-main">
+    <section class="blog-archive-hero">
+      <div class="container">
+        <h1 class="blog-archive-title" data-i18n="blogArchive.title">Blog</h1>
+        <p class="blog-archive-subtitle" data-i18n="blogArchive.subtitle">All posts — insights, lessons, and experiences from over three decades in healthtech and software development.</p>
+      </div>
+    </section>
+
+    <section class="blog-archive-content">
+      <div class="container">
+        <!-- Controls -->
+        <div class="blog-archive-controls">
+          <div class="blog-archive-filters">
+            <button class="filter-btn active" data-filter="all" data-i18n="blogArchive.all">All</button>
+            <button class="filter-btn" data-filter="career" data-i18n="blogArchive.filterCareer">Career</button>
+            <button class="filter-btn" data-filter="tech" data-i18n="blogArchive.filterTech">Technical</button>
+            <button class="filter-btn" data-filter="leadership" data-i18n="blogArchive.filterLeadership">Leadership</button>
+          </div>
+          <div class="blog-archive-sort">
+            <label for="sortSelect" data-i18n="blogArchive.sortLabel">Sort:</label>
+            <select id="sortSelect">
+              <option value="desc" data-i18n="blogArchive.sortDesc">Newest first</option>
+              <option value="asc" data-i18n="blogArchive.sortAsc">Oldest first</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Grid rendered by JS -->
+        <div class="blog-archive-grid" id="blogArchiveGrid"></div>
+
+        <!-- Empty state -->
+        <div class="blog-archive-empty" id="blogArchiveEmpty" style="display:none;">
+          <i class="bi bi-journal-x"></i>
+          <p data-i18n="blogArchive.empty">No posts found for this category.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="copyright">&copy; <span id="currentYear">2026</span> <strong>Kerwin Arias</strong>. <span data-i18n="footer.rights">All rights reserved.</span></p>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" id="backToTop"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="../js/i18n.js"></script>
+  <script>
+    (() => {
+      let posts = [];
+      let currentFilter = 'all';
+      let currentSort = 'desc';
+
+      async function loadPosts() {
+        const res = await fetch('posts.json');
+        posts = await res.json();
+        render();
+      }
+
+      function render() {
+        const lang = I18N.getLang();
+        const grid = document.getElementById('blogArchiveGrid');
+        const empty = document.getElementById('blogArchiveEmpty');
+
+        // Filter
+        let filtered = currentFilter === 'all'
+          ? posts
+          : posts.filter(p => p.tag === currentFilter);
+
+        // Sort
+        filtered.sort((a, b) => {
+          return currentSort === 'desc'
+            ? new Date(b.date) - new Date(a.date)
+            : new Date(a.date) - new Date(b.date);
+        });
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '';
+          empty.style.display = 'flex';
+          return;
+        }
+
+        empty.style.display = 'none';
+        grid.innerHTML = filtered.map(post => {
+          const t = post[lang] || post.en;
+          const imgPath = '../' + post.image;
+          const urlPath = '../' + post.url;
+          return `
+            <a href="${urlPath}" class="blog-card">
+              <div class="blog-card-img">
+                <img src="${imgPath}" alt="${t.title}" loading="lazy">
+                <span class="blog-tag">${t.tag}</span>
+              </div>
+              <div class="blog-card-body">
+                <span class="blog-date"><i class="bi bi-calendar3"></i> ${t.date}</span>
+                <h4 class="blog-card-title">${t.title}</h4>
+                <p class="blog-card-excerpt">${t.excerpt}</p>
+                <span class="blog-read-more">${I18N.get('blog.readMore')}</span>
+              </div>
+            </a>
+          `;
+        }).join('');
+      }
+
+      // Filter buttons
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentFilter = btn.dataset.filter;
+          render();
+        });
+      });
+
+      // Sort select
+      document.getElementById('sortSelect').addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        render();
+      });
+
+      // Re-render on language change
+      window.addEventListener('langChanged', render);
+
+      // Mobile nav toggle
+      const navToggle = document.querySelector('.mobile-nav-toggle');
+      const navbarUl = document.querySelector('.navbar ul');
+      if (navToggle) {
+        navToggle.addEventListener('click', () => {
+          navbarUl.classList.toggle('open');
+          const icon = navToggle.querySelector('i');
+          icon.classList.toggle('bi-list');
+          icon.classList.toggle('bi-x');
+        });
+      }
+
+      // Close mobile nav on link click
+      document.querySelectorAll('.navbar .nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          if (navbarUl.classList.contains('open')) {
+            navbarUl.classList.remove('open');
+            const icon = navToggle.querySelector('i');
+            icon.classList.add('bi-list');
+            icon.classList.remove('bi-x');
+          }
+        });
+      });
+
+      // Close mobile nav on tap outside
+      document.addEventListener('click', (e) => {
+        if (navbarUl && navbarUl.classList.contains('open')) {
+          if (!navbarUl.contains(e.target) && !navToggle.contains(e.target)) {
+            navbarUl.classList.remove('open');
+            const icon = navToggle.querySelector('i');
+            icon.classList.add('bi-list');
+            icon.classList.remove('bi-x');
+          }
+        }
+      });
+
+      // Back to top
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) backToTop.classList.add('active');
+        else backToTop.classList.remove('active');
+      });
+
+      // Year
+      const yearEl = document.getElementById('currentYear');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      // Init
+      document.addEventListener('DOMContentLoaded', loadPosts);
+    })();
+  </script>
+</body>
+</html>

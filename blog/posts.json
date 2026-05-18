@@ -1,0 +1,59 @@
+[
+  {
+    "id": "lecciones-33-anos-desarrollo",
+    "date": "2026-05-05",
+    "tag": "career",
+    "image": "assets/images/blog/blog-lecciones.svg",
+    "url": "blog/lecciones-33-anos-desarrollo.html",
+    "es": {
+      "title": "10 Lecciones que Aprendí en 35 Años de Desarrollo de Software",
+      "excerpt": "De dBase a microservicios FHIR, de waterfalls a agile — las verdades que solo el tiempo te enseña en esta industria.",
+      "date": "5 Mayo, 2026",
+      "tag": "Carrera"
+    },
+    "en": {
+      "title": "10 Lessons I Learned in 35 Years of Software Development",
+      "excerpt": "From dBase to FHIR microservices, from waterfalls to agile — the truths only time teaches you in this industry.",
+      "date": "May 5, 2026",
+      "tag": "Career"
+    }
+  },
+  {
+    "id": "oracle-vs-sqlserver-vs-postgresql",
+    "date": "2026-04-28",
+    "tag": "tech",
+    "image": "assets/images/blog/blog-databases.svg",
+    "url": "blog/oracle-vs-sqlserver-vs-postgresql.html",
+    "es": {
+      "title": "Oracle vs SQL Server vs PostgreSQL: Mi Experiencia Real con los Tres",
+      "excerpt": "Después de trabajar profesionalmente con estos tres motores, comparto en qué destaca cada uno y cuándo elegir cada opción.",
+      "date": "28 Abril, 2026",
+      "tag": "Técnico"
+    },
+    "en": {
+      "title": "Oracle vs SQL Server vs PostgreSQL: My Real Experience with All Three",
+      "excerpt": "After working professionally with these three engines, I share where each excels and when to choose each option.",
+      "date": "April 28, 2026",
+      "tag": "Technical"
+    }
+  },
+  {
+    "id": "gerencia-proyectos-desarrollo",
+    "date": "2026-04-20",
+    "tag": "leadership",
+    "image": "assets/images/blog/blog-gerencia.svg",
+    "url": "blog/gerencia-proyectos-desarrollo.html",
+    "es": {
+      "title": "De Programador a Gerente: Cómo Liderar sin Perder lo Técnico",
+      "excerpt": "La transición de escribir código a dirigir equipos es un camino lleno de errores. Aquí comparto cómo lo navegué.",
+      "date": "20 Abril, 2026",
+      "tag": "Liderazgo"
+    },
+    "en": {
+      "title": "From Programmer to Manager: How to Lead Without Losing the Technical Edge",
+      "excerpt": "The transition from writing code to leading teams is a path full of mistakes. Here's how I navigated it.",
+      "date": "April 20, 2026",
+      "tag": "Leadership"
+    }
+  }
+]
