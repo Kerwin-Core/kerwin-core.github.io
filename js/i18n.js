@@ -132,7 +132,7 @@ const I18N = (() => {
       'proj.subtitle': 'Proyectos de alto impacto que demuestran experiencia en arquitectura, liderazgo técnico y entrega de soluciones en healthtech.',
       'proj.1title': 'gPM — Módulo de Gestión de Consultorios',
       'proj.1metric': '+8 años como desarrollador principal',
-      'proj.1desc': 'Desarrollador y mantenedor principal de gPM (Practice Management), uno de los módulos core de la plataforma EMR gGastro, que gestiona agendamiento, facturación y flujos de trabajo clínicos para miles de consultorios especializados en EE.UU.',
+      'proj.1desc': 'Desarrollador y soporte principal de gPM (Practice Management), uno de los módulos core de la plataforma EMR gGastro, que gestiona agendamiento, facturación y flujos de trabajo clínicos para miles de consultorios especializados en EE.UU.',
       'proj.2title': 'Modernización a Microservicios',
       'proj.2metric': 'Entregado en 6 meses',
       'proj.2desc': 'Lideré la migración completa de servicios monolíticos legados hacia una arquitectura moderna de microservicios con FHIR, GraphQL y REST APIs, mejorando significativamente la escalabilidad y mantenibilidad del sistema.',
